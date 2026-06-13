@@ -35,7 +35,6 @@ export default function Layout({ children, currentView, onNavigate }) {
       `}</style>
 
       <div className="app-layout" style={{ display: "block" }}>
-        {/* Desktop sidebar */}
         <nav className="sidebar" style={{
           background: "var(--color-background-secondary)",
           borderRight: "0.5px solid var(--color-border-tertiary)",
@@ -73,7 +72,6 @@ export default function Layout({ children, currentView, onNavigate }) {
           </div>
         </nav>
 
-        {/* Mobile top header */}
         <div className="mobile-header" style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "0.75rem 1rem",
@@ -88,12 +86,10 @@ export default function Layout({ children, currentView, onNavigate }) {
           <span style={{ fontSize: 11, padding: "2px 8px", borderRadius: 10, background: meta.bg, color: meta.color }}>{meta.label}</span>
         </div>
 
-        {/* Main content */}
         <main className="main-content" style={{ overflow: "auto", background: "var(--color-background-tertiary)" }}>
           {children}
         </main>
 
-        {/* Mobile bottom nav */}
         <div className="mobile-nav" style={{
           position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100,
           background: "var(--color-background-primary)",
